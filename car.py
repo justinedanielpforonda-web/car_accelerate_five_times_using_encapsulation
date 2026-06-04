@@ -5,5 +5,17 @@ class Car:
         self.__make = make
         self.__speed = 0
 
+    def accelerate(self):
+        self.__speed += 5
+
+    def brake(self):
+        self.__speed -= 5
+
+    def get_speed(self):
+        return self.__speed
+
 
 car1 = Car(2025, "Toyota")
+
+car1.accelerate()
+print(car1.get_speed())
