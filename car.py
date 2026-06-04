@@ -9,7 +9,8 @@ class Car:
         self.__speed += 5
 
     def brake(self):
-        self.__speed -= 5
+        if self.__speed >= 5:
+            self.__speed -= 5
 
     def get_speed(self):
         return self.__speed
@@ -17,5 +18,14 @@ class Car:
 
 car1 = Car(2025, "Toyota")
 
-car1.accelerate()
-print(car1.get_speed())
+print("Accelerating")
+
+for i in range(5):
+    car1.accelerate()
+    print(car1.get_speed())
+
+print("Braking")
+
+for i in range(5):
+    car1.brake()
+    print(car1.get_speed())
